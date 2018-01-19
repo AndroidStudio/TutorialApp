@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7IG-Rn-cQj">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,55 +16,76 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yFX-cE-RAQ">
-                                <rect key="frame" x="10" y="74" width="355" height="465.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zc-Er-iP3">
+                                <rect key="frame" x="10" y="74" width="86.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csI-tf-zqZ">
+                                <rect key="frame" x="10" y="145" width="300" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zc-Er-iP3">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCh-EQ-PJQ">
-                                        <rect key="frame" x="0.0" y="30.5" width="355" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4G-SX-uYq">
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="30"/>
+                                        <state key="normal" title="Constraints"/>
+                                        <connections>
+                                            <action selector="pushConstaintsBasics:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bli-gU-Dzl"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUw-vw-s38">
-                                        <rect key="frame" x="0.0" y="70.5" width="120" height="30"/>
+                                        <rect key="frame" x="180" y="0.0" width="120" height="30"/>
                                         <state key="normal" title="Reset Meal Name"/>
                                         <connections>
                                             <action selector="setDefaultNameClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehl-aM-EYl"/>
                                         </connections>
                                     </button>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-Vm-s4o">
-                                        <rect key="frame" x="0.0" y="110.5" width="355" height="355"/>
-                                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="2kI-Vm-s4o" secondAttribute="height" multiplier="394:394" id="gnN-Ed-feU"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="beT-dD-K4R" appends="YES" id="qKK-m9-Hj4"/>
-                                        </connections>
-                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="2kI-Vm-s4o" secondAttribute="trailing" id="2TF-JK-MPq"/>
-                                    <constraint firstItem="6Zc-Er-iP3" firstAttribute="centerX" secondItem="yFX-cE-RAQ" secondAttribute="centerX" id="MOX-tN-w0o"/>
-                                    <constraint firstAttribute="trailing" secondItem="LCh-EQ-PJQ" secondAttribute="trailing" id="U8L-1x-VoU"/>
+                                    <constraint firstItem="Q4G-SX-uYq" firstAttribute="centerY" secondItem="csI-tf-zqZ" secondAttribute="centerY" id="3Mu-Us-hCk"/>
+                                    <constraint firstItem="oUw-vw-s38" firstAttribute="centerY" secondItem="csI-tf-zqZ" secondAttribute="centerY" id="8wy-G5-Hp7"/>
+                                    <constraint firstAttribute="height" constant="30" id="Bcc-5x-d7Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="oUw-vw-s38" secondAttribute="trailing" id="Fvz-fh-eZJ"/>
+                                    <constraint firstItem="oUw-vw-s38" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q4G-SX-uYq" secondAttribute="trailing" id="tI7-dp-Kbc"/>
+                                    <constraint firstItem="Q4G-SX-uYq" firstAttribute="leading" secondItem="csI-tf-zqZ" secondAttribute="leading" id="vJ9-Oi-wSL"/>
                                 </constraints>
-                            </stackView>
+                            </view>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-Vm-s4o">
+                                <rect key="frame" x="10" y="185" width="300" height="299.5"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2kI-Vm-s4o" secondAttribute="height" multiplier="394:394" id="gnN-Ed-feU"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="beT-dD-K4R" appends="YES" id="qKK-m9-Hj4"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCh-EQ-PJQ">
+                                <rect key="frame" x="10" y="105" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yFX-cE-RAQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MOF-mu-CDu"/>
-                            <constraint firstItem="yFX-cE-RAQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="kw8-53-bG1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yFX-cE-RAQ" secondAttribute="trailing" constant="10" id="wgX-na-Ca6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6Zc-Er-iP3" secondAttribute="trailing" constant="223.5" id="2KZ-G3-d4j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LCh-EQ-PJQ" secondAttribute="trailing" constant="10" id="Do6-zh-Rwi"/>
+                            <constraint firstItem="6Zc-Er-iP3" firstAttribute="leading" secondItem="LCh-EQ-PJQ" secondAttribute="leading" id="F2j-0T-Oah"/>
+                            <constraint firstItem="LCh-EQ-PJQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Gna-VS-ezq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="csI-tf-zqZ" secondAttribute="trailing" constant="10" id="PVR-BP-zEO"/>
+                            <constraint firstItem="2kI-Vm-s4o" firstAttribute="top" secondItem="csI-tf-zqZ" secondAttribute="bottom" constant="10" id="Pcm-ZF-oUH"/>
+                            <constraint firstItem="2kI-Vm-s4o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cX9-Rh-0J3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2kI-Vm-s4o" secondAttribute="trailing" constant="10" id="hmX-DT-MHt"/>
+                            <constraint firstItem="6Zc-Er-iP3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="l7y-H0-j4Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="csI-tf-zqZ" secondAttribute="trailing" constant="10" id="ldG-Qf-xgd"/>
+                            <constraint firstItem="csI-tf-zqZ" firstAttribute="top" secondItem="LCh-EQ-PJQ" secondAttribute="bottom" constant="10" id="lkc-ZU-16s"/>
+                            <constraint firstItem="LCh-EQ-PJQ" firstAttribute="top" secondItem="6Zc-Er-iP3" secondAttribute="bottom" constant="10" id="n8Z-8n-5Na"/>
+                            <constraint firstItem="csI-tf-zqZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="s0y-C2-nzg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -92,7 +113,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7IG-Rn-cQj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Frh-d8-Cm4">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

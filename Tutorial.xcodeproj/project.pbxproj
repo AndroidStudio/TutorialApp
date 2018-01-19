@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D55D39320127617007339E0 /* ConstraintBasics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D55D39220127617007339E0 /* ConstraintBasics.storyboard */; };
+		4D55D3952012765E007339E0 /* ConstrainsBasicsContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D55D3942012765E007339E0 /* ConstrainsBasicsContoller.swift */; };
 		4D5E844F2010FC98009A321A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5E844E2010FC98009A321A /* AppDelegate.swift */; };
 		4D5E84512010FC98009A321A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5E84502010FC98009A321A /* ViewController.swift */; };
 		4D5E84542010FC98009A321A /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5E84522010FC98009A321A /* MainScreen.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D55D39220127617007339E0 /* ConstraintBasics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConstraintBasics.storyboard; sourceTree = "<group>"; };
+		4D55D3942012765E007339E0 /* ConstrainsBasicsContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstrainsBasicsContoller.swift; sourceTree = "<group>"; };
 		4D5E844B2010FC98009A321A /* Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D5E844E2010FC98009A321A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D5E84502010FC98009A321A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D55D391201275CD007339E0 /* ConstraintsBasics */ = {
+			isa = PBXGroup;
+			children = (
+				4D55D39220127617007339E0 /* ConstraintBasics.storyboard */,
+				4D55D3942012765E007339E0 /* ConstrainsBasicsContoller.swift */,
+			);
+			path = ConstraintsBasics;
+			sourceTree = "<group>";
+		};
 		4D5E84422010FC98009A321A = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +67,7 @@
 		4D5E844D2010FC98009A321A /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				4D55D391201275CD007339E0 /* ConstraintsBasics */,
 				4D5E846120111318009A321A /* BasicsUI */,
 				4D5E84602010FE5A009A321A /* SupportingFiles */,
 			);
@@ -140,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D5E84592010FC98009A321A /* LaunchScreen.storyboard in Resources */,
+				4D55D39320127617007339E0 /* ConstraintBasics.storyboard in Resources */,
 				4D5E84562010FC98009A321A /* Assets.xcassets in Resources */,
 				4D5E84542010FC98009A321A /* MainScreen.storyboard in Resources */,
 			);
@@ -153,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D5E84512010FC98009A321A /* ViewController.swift in Sources */,
+				4D55D3952012765E007339E0 /* ConstrainsBasicsContoller.swift in Sources */,
 				4D5E844F2010FC98009A321A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
