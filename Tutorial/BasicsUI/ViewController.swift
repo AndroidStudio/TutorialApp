@@ -30,15 +30,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        mealNameLabel.text = textField.text
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        mealNameTextField.resignFirstResponder()
-        return true
-    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else { fatalError("error \(info)") }
@@ -46,17 +37,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         mealImageView.image = selectedImage
         dismiss(animated: true, completion: nil)
     }
-
-    //    class TextFieldDelegate: NSObject, UITextFieldDelegate {
-//
-//        func textFieldDidEndEditing(_ textField: UITextField) {
-//            mealNameLabel.text = textField.text
-//        }
-//
-//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//            textField.resignFirstResponder()
-//            return true
-//        }
-//    }
 }
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //switch
+        self.mealNameLabel.text = textField.text
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+}
+
 
