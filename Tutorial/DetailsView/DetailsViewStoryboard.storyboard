@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j8G-N4-rFN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6Od-ut-Mrz">
+            <objects>
+                <navigationController id="j8G-N4-rFN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bEQ-yM-82q">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4OD-gu-Nsp" kind="relationship" relationship="rootViewController" id="Xea-93-DBQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uec-TQ-QK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1182" y="-10"/>
+        </scene>
+        <!--DetailsView-->
+        <scene sceneID="nQq-tf-KU1">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewStoryboard" id="4OD-gu-Nsp" customClass="DetailsViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qfa-2D-nZp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pobrane" translatesAutoresizingMaskIntoConstraints="NO" id="NzG-cU-Dsx">
+                                <rect key="frame" x="10" y="74" width="355" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="NTu-hr-hdc"/>
+                                    <constraint firstAttribute="width" secondItem="NzG-cU-Dsx" secondAttribute="height" multiplier="355:270" id="RD2-rk-WgT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyx-PM-0OP">
+                                <rect key="frame" x="10" y="607" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aOs-jV-ToC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2o-jR-YJk">
+                                <rect key="frame" x="10" y="404" width="355" height="193"/>
+                                <string key="text">Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMakerLorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="02y-qv-JYY">
+                                <rect key="frame" x="10" y="354" width="355" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ABh-jh-8aD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xMj-Af-FHQ" firstAttribute="trailing" secondItem="02y-qv-JYY" secondAttribute="trailing" constant="10" id="0hD-vL-Wkr"/>
+                            <constraint firstItem="02y-qv-JYY" firstAttribute="leading" secondItem="xMj-Af-FHQ" secondAttribute="leading" constant="10" id="ITF-QF-g8y"/>
+                            <constraint firstItem="jyx-PM-0OP" firstAttribute="leading" secondItem="xMj-Af-FHQ" secondAttribute="leading" constant="10" id="K94-kj-MHB"/>
+                            <constraint firstItem="Z2o-jR-YJk" firstAttribute="top" secondItem="02y-qv-JYY" secondAttribute="bottom" constant="10" id="KVb-hL-vhm"/>
+                            <constraint firstItem="xMj-Af-FHQ" firstAttribute="trailing" secondItem="Z2o-jR-YJk" secondAttribute="trailing" constant="10" id="N4H-Sf-Rf9"/>
+                            <constraint firstItem="xMj-Af-FHQ" firstAttribute="trailing" secondItem="jyx-PM-0OP" secondAttribute="trailing" constant="10" id="Q8Y-v9-6S3"/>
+                            <constraint firstItem="xMj-Af-FHQ" firstAttribute="bottom" secondItem="jyx-PM-0OP" secondAttribute="bottom" constant="10" id="hIl-tK-bS6"/>
+                            <constraint firstItem="NzG-cU-Dsx" firstAttribute="top" secondItem="xMj-Af-FHQ" secondAttribute="top" constant="10" id="i5w-Jt-8UW"/>
+                            <constraint firstItem="02y-qv-JYY" firstAttribute="top" secondItem="NzG-cU-Dsx" secondAttribute="bottom" constant="10" id="sG7-jX-Zha"/>
+                            <constraint firstItem="Z2o-jR-YJk" firstAttribute="leading" secondItem="xMj-Af-FHQ" secondAttribute="leading" constant="10" id="uKd-hG-Z2a"/>
+                            <constraint firstItem="xMj-Af-FHQ" firstAttribute="trailing" secondItem="NzG-cU-Dsx" secondAttribute="trailing" constant="10" id="vpc-wg-8Z1"/>
+                            <constraint firstItem="jyx-PM-0OP" firstAttribute="top" secondItem="Z2o-jR-YJk" secondAttribute="bottom" constant="10" id="wVV-hz-7QZ"/>
+                            <constraint firstItem="NzG-cU-Dsx" firstAttribute="leading" secondItem="xMj-Af-FHQ" secondAttribute="leading" constant="10" id="yfP-Ea-SPy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xMj-Af-FHQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DetailsView" id="YII-VS-5RD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Bo-L1-dmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-418.39999999999998" y="-10.344827586206897"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pobrane" width="275" height="183"/>
+    </resources>
+</document>
