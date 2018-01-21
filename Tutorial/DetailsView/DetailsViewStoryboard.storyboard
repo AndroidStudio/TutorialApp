@@ -25,17 +25,17 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uec-TQ-QK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1182" y="-10"/>
+            <point key="canvasLocation" x="-1105" y="-10"/>
         </scene>
         <!--DetailsView-->
         <scene sceneID="nQq-tf-KU1">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewStoryboard" id="4OD-gu-Nsp" customClass="DetailsViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4OD-gu-Nsp" customClass="DetailsViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qfa-2D-nZp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pobrane" translatesAutoresizingMaskIntoConstraints="NO" id="NzG-cU-Dsx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="NzG-cU-Dsx">
                                 <rect key="frame" x="10" y="74" width="355" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="NTu-hr-hdc"/>
@@ -44,11 +44,16 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyx-PM-0OP">
                                 <rect key="frame" x="10" y="607" width="355" height="50"/>
-                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aOs-jV-ToC"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="MainView">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBaseView:" destination="4OD-gu-Nsp" eventType="touchUpInside" id="iDf-jU-Zce"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2o-jR-YJk">
                                 <rect key="frame" x="10" y="404" width="355" height="193"/>
@@ -86,6 +91,9 @@
                         <viewLayoutGuide key="safeArea" id="xMj-Af-FHQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="DetailsView" id="YII-VS-5RD"/>
+                    <connections>
+                        <outlet property="titleLable" destination="02y-qv-JYY" id="r6A-Sk-bcO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bo-L1-dmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,6 +101,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pobrane" width="275" height="183"/>
+        <image name="photo" width="275" height="183"/>
     </resources>
 </document>

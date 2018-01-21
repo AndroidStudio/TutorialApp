@@ -24,34 +24,40 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acn-Se-IL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="199"/>
+            <point key="canvasLocation" x="39" y="-40"/>
         </scene>
         <!--ScrollView-->
         <scene sceneID="iCa-es-Dw5">
             <objects>
-                <viewController storyboardIdentifier="ScrollViewStoryboard" id="N3N-ie-qf6" customClass="ScrollViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScrollViewStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N3N-ie-qf6" customClass="ScrollViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o1A-NS-tS5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1020"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1070"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWE-rO-t4D">
-                                <rect key="frame" x="0.0" y="64" width="375" height="956"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1006"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-Nw-r92">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etV-Gy-WZ8">
-                                                <rect key="frame" x="10" y="940" width="355" height="50"/>
-                                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="3bC-EZ-JBX">
+                                                <rect key="frame" x="10" y="10" width="355" height="300"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="2Gk-OW-QxZ"/>
+                                                    <constraint firstAttribute="height" constant="300" id="fcJ-Zz-ceP"/>
                                                 </constraints>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tg-FI-fri">
+                                                <rect key="frame" x="10" y="320" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="8ax-fd-Zj2"/>
+                                                    <constraint firstAttribute="height" constant="50" id="vHR-YY-1vb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYU-2L-M7y">
-                                                <rect key="frame" x="10" y="10" width="355" height="920"/>
+                                                <rect key="frame" x="10" y="380" width="355" height="550"/>
                                                 <string key="text">Interface Builder
 Fully integrated within the Xcode IDE, the Interface Builder design canvas makes it simple to prototype a full user interface without writing any code. Prototype in minutes, then graphically connect your interface to the source within the Xcode editor, laying out windows, buttons, and sliders to create a functioning Mac, iPhone, or iPad user interface. With the Assistant editor, you can work on the graphical design side-by-side with the implementation source code. A simple mouse drag from a UI control to the source pane creates a connection between code and interface, and can even create the code stub for you. Learn more
 
@@ -80,17 +86,32 @@ Dozens of pre-configured code completions, such as defining a new class or metho
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etV-Gy-WZ8">
+                                                <rect key="frame" x="10" y="940" width="355" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="2Gk-OW-QxZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="etV-Gy-WZ8" secondAttribute="bottom" constant="10" id="29E-me-2mo"/>
-                                            <constraint firstItem="etV-Gy-WZ8" firstAttribute="top" secondItem="UYU-2L-M7y" secondAttribute="bottom" constant="10" id="3sl-iO-MDx"/>
-                                            <constraint firstItem="UYU-2L-M7y" firstAttribute="leading" secondItem="RAx-Nw-r92" secondAttribute="leading" constant="10" id="74X-xG-cJj"/>
+                                            <constraint firstItem="2tg-FI-fri" firstAttribute="top" secondItem="3bC-EZ-JBX" secondAttribute="bottom" constant="10" id="53A-Lv-d0t"/>
                                             <constraint firstAttribute="height" constant="1000" id="Krt-ai-lqL"/>
+                                            <constraint firstAttribute="trailing" secondItem="3bC-EZ-JBX" secondAttribute="trailing" constant="10" id="Opq-RM-TsI"/>
                                             <constraint firstItem="etV-Gy-WZ8" firstAttribute="leading" secondItem="RAx-Nw-r92" secondAttribute="leading" constant="10" id="Pey-Gk-a0M"/>
+                                            <constraint firstItem="3bC-EZ-JBX" firstAttribute="leading" secondItem="RAx-Nw-r92" secondAttribute="leading" constant="10" id="S3d-hN-EkC"/>
+                                            <constraint firstItem="2tg-FI-fri" firstAttribute="leading" secondItem="RAx-Nw-r92" secondAttribute="leading" constant="10" id="U4u-9J-eaa"/>
                                             <constraint firstAttribute="trailing" secondItem="etV-Gy-WZ8" secondAttribute="trailing" constant="10" id="VWA-U0-WbW"/>
-                                            <constraint firstAttribute="trailing" secondItem="UYU-2L-M7y" secondAttribute="trailing" constant="10" id="Z4f-Ga-6X0"/>
-                                            <constraint firstItem="UYU-2L-M7y" firstAttribute="top" secondItem="RAx-Nw-r92" secondAttribute="top" constant="10" id="fnR-JV-pdo"/>
+                                            <constraint firstItem="3bC-EZ-JBX" firstAttribute="top" secondItem="RAx-Nw-r92" secondAttribute="top" constant="10" id="gBg-XY-K6U"/>
+                                            <constraint firstItem="etV-Gy-WZ8" firstAttribute="top" secondItem="UYU-2L-M7y" secondAttribute="bottom" constant="10" id="jQk-9j-aQE"/>
+                                            <constraint firstItem="UYU-2L-M7y" firstAttribute="leading" secondItem="RAx-Nw-r92" secondAttribute="leading" constant="10" id="m7F-ql-Lkh"/>
+                                            <constraint firstItem="UYU-2L-M7y" firstAttribute="top" secondItem="2tg-FI-fri" secondAttribute="bottom" constant="10" id="uFa-Q8-m8M"/>
+                                            <constraint firstAttribute="trailing" secondItem="UYU-2L-M7y" secondAttribute="trailing" constant="10" id="uXz-S8-fOR"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -113,11 +134,14 @@ Dozens of pre-configured code completions, such as defining a new class or metho
                         <viewLayoutGuide key="safeArea" id="Hec-wP-TnD"/>
                     </view>
                     <navigationItem key="navigationItem" title="ScrollView" id="jbO-bb-dLW"/>
-                    <size key="freeformSize" width="375" height="1020"/>
+                    <size key="freeformSize" width="375" height="1070"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiN-MC-cq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="199"/>
+            <point key="canvasLocation" x="902.8125" y="198.59154929577466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo" width="275" height="183"/>
+    </resources>
 </document>

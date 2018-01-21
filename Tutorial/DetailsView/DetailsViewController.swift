@@ -9,9 +9,20 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-    
-    class var controller: DetailsViewController {
-        return UIStoryboard(name: "DetailsViewStoryboard", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewStoryboard") as! DetailsViewController
+    override class func identifier() -> String { return "DetailsViewStoryboard" }
+
+    public var detailsTitle: String? = "Default Title"
+
+    @IBOutlet weak var titleLable: UITextField!
+
+    @IBAction func startBaseView(_ sender: UIButton) {
+        if let viewController = navigationController?.viewControllers[0] {
+            navigationController?.popToViewController(viewController, animated: true)
+        }
     }
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        titleLable.text = detailsTitle
+    }
 }

@@ -9,9 +9,5 @@
 import UIKit
 
 class ScrollViewController: UIViewController {
-    
-    class var controller : ScrollViewController {
-        return UIStoryboard(name: "ScrollViewStoryboard", bundle: nil).instantiateViewController(withIdentifier: "ScrollViewStoryboard") as! ScrollViewController
-    }
-    
+    override class func identifier() -> String { return "ScrollViewStoryboard" }
 }

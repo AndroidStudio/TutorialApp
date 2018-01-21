@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jRG-As-VEc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Au0-Fa-a6K">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Qp-Zl-C6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="jRG-As-VEc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GFn-VJ-mIw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UFs-th-nwT" kind="relationship" relationship="rootViewController" id="bCa-8U-ahq"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-422" y="275"/>
+        </scene>
+        <!--PageView-->
+        <scene sceneID="bCF-f4-3g7">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewStoryboard" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="UFs-th-nwT" customClass="PageViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="PageView" id="EY9-CZ-eCL"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ezy-Kk-e9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="275"/>
+        </scene>
+    </scenes>
+</document>
