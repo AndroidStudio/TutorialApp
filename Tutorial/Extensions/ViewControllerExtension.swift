@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     @objc class func identifier() -> String? { return nil }
     @objc class func name() -> String? { return nil }
-
+    
     func createViewController(_ name: String, _ identifier: String) -> UIViewController {
         return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
     }
@@ -22,8 +22,6 @@ extension UIViewController {
 
             sendData?(viewController)
             navigation.pushViewController(viewController, animated: true)
-
-            print("pushController identifier: \(identifier)")
         }
     }
 }

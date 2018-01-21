@@ -31,14 +31,14 @@
             <objects>
                 <viewController storyboardIdentifier="ScrollViewStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N3N-ie-qf6" customClass="ScrollViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o1A-NS-tS5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1070"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2570"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWE-rO-t4D">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1006"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="2506"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-Nw-r92">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2032.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="3bC-EZ-JBX">
                                                 <rect key="frame" x="10" y="10" width="355" height="300"/>
@@ -57,7 +57,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYU-2L-M7y">
-                                                <rect key="frame" x="10" y="380" width="355" height="550"/>
+                                                <rect key="frame" x="10" y="380" width="355" height="1582.5"/>
                                                 <string key="text">Interface Builder
 Fully integrated within the Xcode IDE, the Interface Builder design canvas makes it simple to prototype a full user interface without writing any code. Prototype in minutes, then graphically connect your interface to the source within the Xcode editor, laying out windows, buttons, and sliders to create a functioning Mac, iPhone, or iPad user interface. With the Assistant editor, you can work on the graphical design side-by-side with the implementation source code. A simple mouse drag from a UI control to the source pane creates a connection between code and interface, and can even create the code stub for you. Learn more
 
@@ -87,7 +87,7 @@ Dozens of pre-configured code completions, such as defining a new class or metho
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etV-Gy-WZ8">
-                                                <rect key="frame" x="10" y="940" width="355" height="50"/>
+                                                <rect key="frame" x="10" y="1972.5" width="355" height="50"/>
                                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="2Gk-OW-QxZ"/>
@@ -101,7 +101,6 @@ Dozens of pre-configured code completions, such as defining a new class or metho
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="etV-Gy-WZ8" secondAttribute="bottom" constant="10" id="29E-me-2mo"/>
                                             <constraint firstItem="2tg-FI-fri" firstAttribute="top" secondItem="3bC-EZ-JBX" secondAttribute="bottom" constant="10" id="53A-Lv-d0t"/>
-                                            <constraint firstAttribute="height" constant="1000" id="Krt-ai-lqL"/>
                                             <constraint firstAttribute="trailing" secondItem="3bC-EZ-JBX" secondAttribute="trailing" constant="10" id="Opq-RM-TsI"/>
                                             <constraint firstItem="etV-Gy-WZ8" firstAttribute="leading" secondItem="RAx-Nw-r92" secondAttribute="leading" constant="10" id="Pey-Gk-a0M"/>
                                             <constraint firstItem="3bC-EZ-JBX" firstAttribute="leading" secondItem="RAx-Nw-r92" secondAttribute="leading" constant="10" id="S3d-hN-EkC"/>
@@ -134,7 +133,7 @@ Dozens of pre-configured code completions, such as defining a new class or metho
                         <viewLayoutGuide key="safeArea" id="Hec-wP-TnD"/>
                     </view>
                     <navigationItem key="navigationItem" title="ScrollView" id="jbO-bb-dLW"/>
-                    <size key="freeformSize" width="375" height="1070"/>
+                    <size key="freeformSize" width="375" height="2570"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiN-MC-cq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

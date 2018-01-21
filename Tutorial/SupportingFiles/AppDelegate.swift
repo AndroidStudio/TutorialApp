@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageControl.pageIndicatorTintColor = UIColor.gray
         pageControl.currentPageIndicatorTintColor = UIColor.orange
         pageControl.backgroundColor = UIColor.white
+        
+        let barButton = UIBarButtonItem.appearance()
+        barButton.tintColor = UIColor.orange
         return true
     }
 

@@ -10,17 +10,14 @@ import UIKit
 
 class TableViewController: UIViewController {
     override class func identifier() -> String { return "TableViewStoryboard" }
-
     @IBOutlet weak var tableView: UITableView!
-
-    var mealAdapter: MealAdapter?
+    
+    lazy var mealAdapter: MealAdapter = MealAdapter(controller: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mealAdapter = MealAdapter(controller: self)
-
         tableView.dataSource = mealAdapter
         tableView.delegate = mealAdapter
     }
-
 }
+
