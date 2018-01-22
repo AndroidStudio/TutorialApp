@@ -9,11 +9,11 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-    override class func identifier() -> String { return "DetailsViewStoryboard" }
-
-    public var detailsTitle: String? = "Default Title"
+    public var detailsTitle: String?
+    public var detailsDescription: String?
 
     @IBOutlet weak var titleLable: UITextField!
+    @IBOutlet weak var descriptionLabel: UILabel!
 
     @IBAction func startBaseView(_ sender: UIButton) {
         if let viewController = navigationController?.viewControllers[0] {
@@ -23,6 +23,10 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if detailsDescription != nil {
+            descriptionLabel.text = detailsDescription
+        }
+
         titleLable.text = detailsTitle
     }
 }

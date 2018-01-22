@@ -9,7 +9,6 @@
 import UIKit
 
 class TableViewController: UIViewController {
-    override class func identifier() -> String { return "TableViewStoryboard" }
     @IBOutlet weak var tableView: UITableView!
     
     lazy var mealAdapter: MealAdapter = MealAdapter(controller: self)

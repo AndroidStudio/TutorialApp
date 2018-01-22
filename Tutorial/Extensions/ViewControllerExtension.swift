@@ -9,20 +9,49 @@
 import UIKit
 
 extension UIViewController {
-    @objc class func identifier() -> String? { return nil }
-    @objc class func name() -> String? { return nil }
-    
-    func createViewController(_ name: String, _ identifier: String) -> UIViewController {
-        return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
+
+    class func detailsViewController(getData: () -> (title: String?, description: String?)) -> DetailsViewController {
+        let controller = createViewController(DetailsViewController.self, "DetailsViewStoryboard", "DetailsViewStoryboard")
+
+        let (title, description) = getData()
+        controller.detailsTitle = title
+        controller.detailsDescription = description
+
+        return controller
     }
 
-    func pushController<T: UIViewController>(type: T.Type, sendData: ((T) -> ())? = nil) {
-        if let navigation = navigationController, let name = T.name() ?? T.identifier(), let identifier = T.identifier() {
-            let viewController: T = createViewController(name, identifier) as! T
-
-            sendData?(viewController)
-            navigation.pushViewController(viewController, animated: true)
-        }
+    class func detailsViewController2(getData: (_ title: String?, _ description: String?) -> ()) -> DetailsViewController {
+        let controller = createViewController(DetailsViewController.self, "DetailsViewStoryboard", "DetailsViewStoryboard")
+        
+        var title: String?
+        var description: String?
+        
+        getData(title, description)
+        
+        controller.detailsTitle = title
+        controller.detailsDescription = description
+        return controller
     }
+
+    class func scrollViewController() -> ScrollViewController {
+        return createViewController(ScrollViewController.self, "ScrollViewStoryboard", "ScrollViewStoryboard")
+    }
+
+    class func tableViewController() -> TableViewController {
+        return createViewController(TableViewController.self, "TableViewStoryboard", "TableViewStoryboard")
+    }
+
+    class func pageViewController() -> PageViewController {
+        return createViewController(PageViewController.self, "PageViewStoryboard", "PageViewStoryboard")
+    }
+
+    private class func createViewController<T: UIViewController>(_ type: T.Type, _ name: String, _ identifier: String) -> T {
+        return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier) as! T
+    }
+
+    func pushController(controller: UIViewController) {
+        navigationController?.pushViewController(controller, animated: true)
+    }
+
 }
 

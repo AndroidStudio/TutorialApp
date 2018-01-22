@@ -92,6 +92,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="DetailsView" id="YII-VS-5RD"/>
                     <connections>
+                        <outlet property="descriptionLabel" destination="Z2o-jR-YJk" id="7DG-nD-hwz"/>
                         <outlet property="titleLable" destination="02y-qv-JYY" id="r6A-Sk-bcO"/>
                     </connections>
                 </viewController>

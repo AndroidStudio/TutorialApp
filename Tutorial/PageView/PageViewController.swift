@@ -10,25 +10,19 @@ import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
 
-    override class func identifier() -> String { return "PageViewStoryboard" }
-
     lazy var controllers: [UIViewController] = [
-        cratePage(identifier: DetailsViewController.identifier()),
-        cratePage(identifier: ScrollViewController.identifier()),
-        cratePage(identifier: DetailsViewController.identifier()),
-        cratePage(identifier: ScrollViewController.identifier()),
-        cratePage(identifier: TableViewController.identifier())
+        UIViewController.scrollViewController(),
+        UIViewController.tableViewController(),
+        UIViewController.scrollViewController(),
+        UIViewController.tableViewController(),
+        UIViewController.scrollViewController()
     ]
-
-    private func cratePage(identifier: String) -> UIViewController {
-        return createViewController(identifier, identifier)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
         delegate = self
-        
+
         if let first: UIViewController = controllers.first {
             setViewControllers([first], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
         }
