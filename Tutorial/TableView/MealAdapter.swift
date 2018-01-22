@@ -69,7 +69,7 @@ class MealAdapter: NSObject, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data: TableModel = dataSouce[indexPath.row]
 
-        controller?.pushController(controller: UIViewController.detailsViewController(getData: { () -> (title: String?, description: String?) in
+        controller?.pushController(controller: UIViewController.detailsViewController(requierdData: { () -> (title: String?, description: String?) in
             return (data.title, data.description)
         }))
     }

@@ -3,7 +3,7 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBAction func startDetailsView(_ sender: UIButton) {
-        pushController(controller: UIViewController.detailsViewController(getData: { () -> (title: String, description: String) in
+        pushController(controller: UIViewController.detailsViewController(requierdData: { () -> (title: String, description: String) in
             return ("Launch", "Copyright © 2018 Witchcraft-11. All rights reserved. Copyright © 2018 Witchcraft-11. All rights reserved.")
         }))
 

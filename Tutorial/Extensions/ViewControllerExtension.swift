@@ -10,10 +10,10 @@ import UIKit
 
 extension UIViewController {
 
-    class func detailsViewController(getData: () -> (title: String?, description: String?)) -> DetailsViewController {
+    class func detailsViewController(requierdData: () -> (title: String?, description: String?)) -> DetailsViewController {
         let controller = createViewController(DetailsViewController.self, "DetailsViewStoryboard", "DetailsViewStoryboard")
 
-        let (title, description) = getData()
+        let (title, description) = requierdData()
         controller.detailsTitle = title
         controller.detailsDescription = description
 
