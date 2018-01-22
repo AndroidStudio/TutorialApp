@@ -7,9 +7,10 @@ class MainViewController: UIViewController {
             return ("Launch", "Copyright © 2018 Witchcraft-11. All rights reserved. Copyright © 2018 Witchcraft-11. All rights reserved.")
         }))
 
-//        pushController(controller: UIViewController.detailsViewController2(getData: { (title, description) in
-//            title = "a"
-//        }))
+        pushController(controller: UIViewController.detailsViewController2(getData: { (title, description) in
+            title = "Launch"
+            description = "Copyright © 2018 Witchcraft-11. All rights reserved. Copyright © 2018 Witchcraft-11. All rights reserved."
+        }))
     }
 
     @IBAction func startScroolView(_ sender: UIButton) {
