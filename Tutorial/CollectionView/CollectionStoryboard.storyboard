@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="idK-Lf-XOE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="o5n-4L-CDl">
+            <objects>
+                <navigationController id="idK-Lf-XOE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oa2-aO-CJ7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nOP-yk-Whd" kind="relationship" relationship="rootViewController" id="be3-oV-2Wr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="und-zZ-KNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-364" y="150"/>
+        </scene>
+        <!--CollectionView-->
+        <scene sceneID="quw-Fc-bJo">
+            <objects>
+                <viewController storyboardIdentifier="CollectionStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nOP-yk-Whd" customClass="CollectionViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ls1-IP-vtg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sLc-zh-yTw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XVv-ND-kK4">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sLc-zh-yTw" firstAttribute="top" secondItem="rCq-2M-Uya" secondAttribute="top" id="E0V-0O-XES"/>
+                            <constraint firstItem="rCq-2M-Uya" firstAttribute="bottom" secondItem="sLc-zh-yTw" secondAttribute="bottom" id="U4a-do-iZF"/>
+                            <constraint firstItem="rCq-2M-Uya" firstAttribute="trailing" secondItem="sLc-zh-yTw" secondAttribute="trailing" id="X6f-mV-LLg"/>
+                            <constraint firstItem="sLc-zh-yTw" firstAttribute="leading" secondItem="rCq-2M-Uya" secondAttribute="leading" id="wvZ-Nl-Xq6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rCq-2M-Uya"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CollectionView" id="DZm-wx-LmV"/>
+                    <connections>
+                        <outlet property="collectionView" destination="sLc-zh-yTw" id="ylk-Uv-rpl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VrI-fw-el6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="150"/>
+        </scene>
+    </scenes>
+</document>

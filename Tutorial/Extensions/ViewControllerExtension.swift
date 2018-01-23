@@ -10,26 +10,12 @@ import UIKit
 
 extension UIViewController {
 
-    class func detailsViewController(requierdData: () -> (title: String?, description: String?)) -> DetailsViewController {
+    class func detailsViewController(title: String?, description: String?) -> DetailsViewController {
         let controller = createViewController(DetailsViewController.self, "DetailsViewStoryboard", "DetailsViewStoryboard")
 
-        let (title, description) = requierdData()
-        controller.detailsTitle = title
         controller.detailsDescription = description
-
-        return controller
-    }
-
-    class func detailsViewController2(getData: (_ title: String?, _ description: String?) -> ()) -> DetailsViewController {
-        let controller = createViewController(DetailsViewController.self, "DetailsViewStoryboard", "DetailsViewStoryboard")
-        
-        var title: String?
-        var description: String?
-        
-        getData(title, description)
-        
         controller.detailsTitle = title
-        controller.detailsDescription = description
+
         return controller
     }
 
@@ -43,6 +29,10 @@ extension UIViewController {
 
     class func pageViewController() -> PageViewController {
         return createViewController(PageViewController.self, "PageViewStoryboard", "PageViewStoryboard")
+    }
+
+    class func collectionViewController() -> CollectionViewController {
+        return createViewController(CollectionViewController.self, "CollectionStoryboard", "CollectionStoryboard")
     }
 
     private class func createViewController<T: UIViewController>(_ type: T.Type, _ name: String, _ identifier: String) -> T {
