@@ -10,7 +10,6 @@ import UIKit
 
 class CollectionViewController: UIViewController {
 
-
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             CollectionViewCell.register(collectionView: collectionView)
